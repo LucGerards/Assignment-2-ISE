@@ -10,7 +10,7 @@ public class BookTracker {
             System.out.println("Connected to database.");
 
             while (true) {
-                System.out.println("\n--- Booktracker Menu ---");
+                System.out.println("\n===== Booktracker Menu =====");
                 System.out.println("1. Add a user");
                 System.out.println("2. Show reading habits for a user");
                 System.out.println("3. Change a book title");
@@ -21,6 +21,7 @@ public class BookTracker {
                 System.out.println("8. Show number of users who read more than one book");
                 System.out.println("9. Add 'Name' column to User table");
                 System.out.println("0. Exit");
+                System.out.println("============================");
                 System.out.print("Select: ");
 
                 int option = scanner.nextInt();

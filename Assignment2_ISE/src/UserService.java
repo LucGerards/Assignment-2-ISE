@@ -4,18 +4,15 @@ import java.util.Scanner;
 public class UserService {
 
     public static void addUser(Connection conn, Scanner scanner) throws SQLException {
-        System.out.print("Enter User ID: ");
-        int id = scanner.nextInt();
         System.out.print("Enter Age: ");
         int age = scanner.nextInt();
         scanner.nextLine();
         System.out.print("Enter Gender: ");
         String gender = scanner.nextLine();
 
-        PreparedStatement stmt = conn.prepareStatement("INSERT INTO User (userID, age, gender) VALUES (?, ?, ?)");
-        stmt.setInt(1, id);
-        stmt.setInt(2, age);
-        stmt.setString(3, gender);
+        PreparedStatement stmt = conn.prepareStatement("INSERT INTO User (age, gender) VALUES (?, ?)");
+        stmt.setInt(1, age);
+        stmt.setString(2, gender);
         stmt.executeUpdate();
         System.out.println("User added.");
     }
